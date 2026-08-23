@@ -46,3 +46,13 @@ Running the file executes `runTest` against six built-in cases (three normal, th
 
 - Records must already be sorted by `ssn` ascending in each input list; the merge does not sort.
 - This is a plain Node.js script with no external dependencies.
+
+
+## Time + Space complexity
+Time & Space Complexity
+
+Time: O(n + m) — every node in both lists is visited and relinked exactly once.
+
+Space: O(1) extra — nodes are relinked in place, not copied; only one dummy node is allocated.
+
+(A recursive version of this merge would also be O(n+m) time, but O(n+m) space due to call stack growth — the iterative version avoids that, which matters at hospital scale.)
